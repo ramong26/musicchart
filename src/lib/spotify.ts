@@ -9,6 +9,8 @@ const SPOTIFY_CHART_URL =
 let accessToken: string | null = null;
 
 async function getAccessToken(): Promise<string> {
+  console.log('✅ getAccessToken called'); // 이거 터미널에 찍히는지 확인
+
   if (accessToken) return accessToken;
 
   const clientId = process.env.SPOTIFY_CLIENT_ID!;
