@@ -4,7 +4,7 @@ import { Buffer } from 'buffer'; // 추가 필요: npm install buffer
 
 const SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token';
 const SPOTIFY_CHART_URL =
-  'https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF/tracks';
+  'https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF';
 
 let accessToken: string | null = null;
 
