@@ -4,7 +4,7 @@ import { Buffer } from 'buffer'; // 추가 필요: npm install buffer
 
 const SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token';
 const SPOTIFY_CHART_URL =
-  'https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF'; // 글로벌 Top 50 플레이리스트
+  'https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF/tracks';
 
 let accessToken: string | null = null;
 
@@ -47,6 +47,9 @@ async function getTopTracks(): Promise<Track[]> {
   });
 
   const data = await res.json();
+  console.log('Request Headers:', {
+    Authorization: `Bearer ${token}`,
+  });
   console.log('Spotify API Response:', data);
 
   // 데이터가 제대로 오는지 확인
