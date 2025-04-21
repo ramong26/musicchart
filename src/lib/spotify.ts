@@ -49,7 +49,7 @@ async function getTopTracks(): Promise<Track[]> {
   });
 
   const data = await res.json();
-  console.log('Request Headers:', {
+  console.log('ㄴㅇㅇRequest Headers:', {
     Authorization: `Bearer ${token}`,
   });
   console.log('Spotify API Response:', data);
@@ -74,6 +74,7 @@ async function getTopTracks(): Promise<Track[]> {
   } else {
     throw new Error('Invalid data format received from Spotify API');
   }
+  console.log('끝');
 }
 
 export default getTopTracks;
